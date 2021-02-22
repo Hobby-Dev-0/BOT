@@ -9,7 +9,7 @@ Available Commands:
 
 import re
 from telethon import events
-import LEGEND.plugins.sql_helper.blacklist_sql as sql
+import LEGEND.X.sql_helper.blacklist_sql as sql
 
 from LEGEND import CMD_HELP
 from LEGEND.utils import admin_cmd, edit_or_reply, sudo_cmd

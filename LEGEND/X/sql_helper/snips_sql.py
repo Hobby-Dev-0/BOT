@@ -1,5 +1,5 @@
 from sqlalchemy import Column, UnicodeText, LargeBinary, Numeric
-from LEGEND.plugins.sql_helper import SESSION, BASE
+from LEGEND.X.sql_helper import SESSION, BASE
 
 
 class Snips(BASE):

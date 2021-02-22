@@ -15,7 +15,7 @@ async def unload(event):
     if event.fwd_from:
         return
     shortname = event.pattern_match["shortname"]
-    dir_path =f"./LEGEND/plugins/{shortname}.py"
+    dir_path =f"./LEGEND/X/{shortname}.py"
     try:
         remove_plugin(shortname)
         os.remove(dir_path)

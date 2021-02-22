@@ -1,5 +1,5 @@
 try:
-    from LEGEND.plugins.sql_helper import SESSION, BASE
+    from LEGEND.X.sql_helper import SESSION, BASE
 except ImportError:
     raise AttributeError
 

@@ -39,7 +39,7 @@ else:
     
 
 import glob
-path = 'LEGEND/plugins/*.py'
+path = 'LEGEND/X/*.py'
 files = glob.glob(path)
 for name in files:
     with open(name) as f:

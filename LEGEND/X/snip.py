@@ -8,7 +8,7 @@ Available Commands:
 .snipd"""
 from telethon import events, utils
 from telethon.tl import types
-from LEGEND.plugins.sql_helper.snips_sql import get_snips, add_snip, remove_snip, get_all_snips
+from LEGEND.X.sql_helper.snips_sql import get_snips, add_snip, remove_snip, get_all_snips
 from LEGEND.utils import admin_cmd
 
 

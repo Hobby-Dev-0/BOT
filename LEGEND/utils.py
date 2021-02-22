@@ -38,8 +38,8 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import LEGEND.utils
 
-        path = Path(f"LEGEND/plugins/{shortname}.py")
-        name = "LEGEND.plugins.{}".format(shortname)
+        path = Path(f"LEGEND/X/{shortname}.py")
+        name = "LEGEND.X.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -47,8 +47,8 @@ def load_module(shortname):
     else:
         import LEGEND.utils
 
-        path = Path(f"LEGEND/plugins/{shortname}.py")
-        name = "LEGEND.plugins.{}".format(shortname)
+        path = Path(f"LEGEND/X/{shortname}.py")
+        name = "LEGEND.X.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -65,7 +65,7 @@ def load_module(shortname):
         sys.modules["LEGEND.events"] = LEGEND.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["LEGEND.plugins." + shortname] = mod
+        sys.modules["LEGEND.X." + shortname] = mod
         LOGS.info("Successfully imported " + shortname)
 
 
@@ -77,7 +77,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"LEGEND.plugins.{shortname}"
+            name = f"LEGEND.X.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -536,8 +536,8 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"LEGEND/plugins/assistant/{shortname}.py")
-        name = "LEGEND.plugins.assistant.{}".format(shortname)
+        path = Path(f"LEGEND/X/assistant/{shortname}.py")
+        name = "LEGEND.X.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -548,11 +548,11 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"LEGEND/plugins/assistant/{shortname}.py")
-        name = "LEGEND.plugins.assistant.{}".format(shortname)
+        path = Path(f"LEGEND/X/assistant/{shortname}.py")
+        name = "LEGEND.X.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
-        sys.modules["LEGEND.plugins.assistant" + shortname] = mod
+        sys.modules["LEGEND.X.assistant" + shortname] = mod
     # print("Assistant Has imported " + shortname)

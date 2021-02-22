@@ -143,7 +143,7 @@ async def install(lightning):
 
                     await lightning.get_reply_message(),
 
-                    "LEGEND/plugins/",  # pylint:disable=E0602
+                    "LEGEND/X/",  # pylint:disable=E0602
 
                 )
 
@@ -659,7 +659,7 @@ async def lightning_pugins_query_hndlr(lightning):
 
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
 
-            data=re.compile(b"_lightning_plugins_(.*)")
+            data=re.compile(b"_lightning_X_(.*)")
 
    )
 
@@ -1265,43 +1265,43 @@ def lightnings_menu_for_help(b_lac_krish, lightning_plugs, lightning_lol):
 
     lightning_no_coulmns = 3
 
-    lightning_plugins = []
+    lightning_X = []
 
     for p in lightning_plugs:
 
         if not p.startswith("_"):
 
-            lightning_plugins.append(p)
+            lightning_X.append(p)
 
-    lightning_plugins = sorted(lightning_plugins)
+    lightning_X = sorted(lightning_X)
 
-    plugins = [
+    X = [
 
         custom.Button.inline(
 
-            "{} {} {}".format("⚡", x, "🔥"), data="_lightning_plugins_{}".format(x)
+            "{} {} {}".format("⚡", x, "🔥"), data="_lightning_X_{}".format(x)
 
         )
 
-        for x in lightning_plugins
+        for x in lightning_X
 
     ]
 
-    pairs = list(zip(plugins[::lightning_no_coulmns], plugins[1::lightning_no_coulmns]))
+    pairs = list(zip(X[::lightning_no_coulmns], X[1::lightning_no_coulmns]))
 
-    if len(plugins) % lightning_no_coulmns == 1:
+    if len(X) % lightning_no_coulmns == 1:
 
-        pairs.append((plugins[-1],))
+        pairs.append((X[-1],))
 
     max_fix = ceil(len(pairs) / lightning_no_rows)
 
-    lightning_plugins_pages = b_lac_krish % max_fix
+    lightning_X_pages = b_lac_krish % max_fix
 
     if len(pairs) > lightning_no_rows:
 
         pairs = pairs[
 
-            lightning_plugins_pages * lightning_no_rows : lightning_no_rows * (lightning_plugins_pages + 1)
+            lightning_X_pages * lightning_no_rows : lightning_no_rows * (lightning_X_pages + 1)
 
         ] + [
 
@@ -1309,7 +1309,7 @@ def lightnings_menu_for_help(b_lac_krish, lightning_plugs, lightning_lol):
 
                 custom.Button.inline(
 
-                    "😑", data="{}_prev({})".format(lightning_lol, lightning_plugins_pages)
+                    "😑", data="{}_prev({})".format(lightning_lol, lightning_X_pages)
 
                 ),
 
@@ -1321,7 +1321,7 @@ def lightnings_menu_for_help(b_lac_krish, lightning_plugs, lightning_lol):
 
                custom.Button.inline(
 
-                    "🥴 ", data="{}_next({})".format(lightning_lol, lightning_plugins_pages)
+                    "🥴 ", data="{}_next({})".format(lightning_lol, lightning_X_pages)
 
                 ),
 

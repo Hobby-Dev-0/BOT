@@ -3,7 +3,7 @@
 import asyncio
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
-import LEGEND.plugins.sql_helper.antiflood_sql as sql
+import LEGEND.X.sql_helper.antiflood_sql as sql
 from LEGEND import CMD_HELP
 from LEGEND.utils import admin_cmd, edit_or_reply, sudo_cmd
 

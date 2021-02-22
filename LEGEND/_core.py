@@ -22,7 +22,7 @@ async def send(event):
     message_id = event.message.id
     thumb = thumb_image_path
     input_str = event.pattern_match.group(1)
-    the_plugin_file = "./LEGEND/plugins/{}.py".format(input_str)
+    the_plugin_file = "./LEGEND/X/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         start = datetime.now()
         pro = await event.client.send_file(
@@ -55,7 +55,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "LEGEND/plugins/",  # pylint:disable=E0602
+                    "LEGEND/X/",  # pylint:disable=E0602
                 )
             )
             if "(" not in downloaded_file_name:

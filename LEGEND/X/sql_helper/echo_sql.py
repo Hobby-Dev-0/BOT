@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String
 
-from LEGEND.plugins.sql_helper import BASE, SESSION
+from LEGEND.X.sql_helper import BASE, SESSION
 
 
 class ECHOSQL(BASE):

@@ -38,7 +38,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 
-import LEGEND.plugins.sql_helper.pmpermit_sql as lightning_sql
+import LEGEND.X.sql_helper.pmpermit_sql as lightning_sql
 
 from LEGEND import ALIVE_NAME, bot
 

@@ -174,8 +174,8 @@ Add them to your harem by sending /protecc character name"""
 '''@bot.on(ChatAction)
 async def wafu_to_chat(event):
     try:
-        from LEGEND.plugins.sql_helper.autowaifu_sql import get_current_wafu_settings
-        from LEGEND.plugins.sql_helper.autowaifu_sql import update_previous_wafu
+        from LEGEND.X.sql_helper.autowaifu_sql import get_current_wafu_settings
+        from LEGEND.X.sql_helper.autowaifu_sql import update_previous_wafu
     except AttributeError:
         return
     cws = get_current_wafu_settings(event.chat_id)
@@ -186,7 +186,7 @@ async def wafu_to_chat(event):
 @register(outgoing=True, pattern=r"^.savewaifu(?: |$)(.*)")
 async def save_wafu(event):
     try:
-        from LEGEND.plugins.sql_helper.autowaifu_sql import add_wafu_setting
+        from LEGEND.X.sql_helper.autowaifu_sql import add_wafu_setting
     except AttributeError:
         return await event.edit("`Running on Non-SQL mode!`")
 
@@ -207,7 +207,7 @@ Add them to your harem by sending /protecc character name"""
 @register(outgoing=True, pattern="^.checkwaifu$")
 async def show_wafu(event):
     try:
-        from LEGEND.plugins.sql_helper.autowaifu_sql import get_current_wafu_settings
+        from LEGEND.X.sql_helper.autowaifu_sql import get_current_wafu_settings
     except AttributeError:
         await event.edit("`Running on Non-SQL mode!`")
         return
@@ -224,7 +224,7 @@ async def show_wafu(event):
 @register(outgoing=True, pattern="^.clearwaifu$")
 async def del_wafu(event):
     try:
-        from LEGEND.plugins.sql_helper.autowaifu_sql import rm_wafu_setting
+        from LEGEND.X.sql_helper.autowaifu_sql import rm_wafu_setting
     except AttributeError:
         await event.edit("`Running on Non-SQL mode!`")
         return

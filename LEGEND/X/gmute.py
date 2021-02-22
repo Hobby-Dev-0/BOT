@@ -1,4 +1,4 @@
-from LEGEND.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from LEGEND.X.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
 from LEGEND import CMD_HELP
 from LEGEND.utils import admin_cmd
