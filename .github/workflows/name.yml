@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "userbot"
+          find: "plugins"
 
-          replace: "LEGEND"
+          replace: "X"
 
       - name: Create Pull Request
 
