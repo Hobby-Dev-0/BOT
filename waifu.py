@@ -1,16 +1,16 @@
 
-from userbot import CMD_HELP, bot
-from userbot.utils import admin_cmd
+from LEGEND import CMD_HELP, bot
+from LEGEND.utils import admin_cmd
 from telethon.events import ChatAction
 #made by shivam
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
 #Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam
-from userbot import bot, CMD_HELP
+from LEGEND import bot, CMD_HELP
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
-from userbot.utils import register
+from LEGEND.utils import register
 #Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam
-from userbot import TEMP_DOWNLOAD_DIRECTORY
+from LEGEND import TEMP_DOWNLOAD_DIRECTORY
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
 import   os,re, bs4, requests, io
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
@@ -58,7 +58,7 @@ from telethon.tl.types import MessageMediaPhoto
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
 #Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam
 import urllib
-from userbot import bot as borg
+from LEGEND import bot as borg
 import os
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
 from bs4 import BeautifulSoup
@@ -66,7 +66,7 @@ from bs4 import BeautifulSoup
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
 opener = urllib.request.build_opener() ; useragent = 'Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.70 Mobile Safari/537.36' ; opener.addheaders = [('User-agent', useragent)]
 #Made by Sh1vam#Made by Sh1vam#Made by Sh1vam#Made by Sh1vam#Made by Sh1vam
-from userbot.legend import MASTER
+from LEGEND.legend import MASTER
 LEGENDX = MASTER
 WAFU_CHATID=int(os.environ.get("WAFU_CHATID",-1001230114424))
 async def ParseSauce(googleurl):   
@@ -157,8 +157,8 @@ Add them to your harem by sending /protecc character name"""
                       #Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam
                       #Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam#Made by Shivam
                       try:
-                            from userbot.modules.sql_helper.autowafu_sql import get_current_wafu_settings
-                            from userbot.modules.sql_helper.autowafu_sql import update_previous_wafu
+                            from LEGEND.modules.sql_helper.autowafu_sql import get_current_wafu_settings
+                            from LEGEND.modules.sql_helper.autowafu_sql import update_previous_wafu
                       except AttributeError:
                             return
                       cws = get_current_wafu_settings(event.chat_id)
@@ -174,8 +174,8 @@ Add them to your harem by sending /protecc character name"""
 '''@bot.on(ChatAction)
 async def wafu_to_chat(event):
     try:
-        from userbot.plugins.sql_helper.autowaifu_sql import get_current_wafu_settings
-        from userbot.plugins.sql_helper.autowaifu_sql import update_previous_wafu
+        from LEGEND.plugins.sql_helper.autowaifu_sql import get_current_wafu_settings
+        from LEGEND.plugins.sql_helper.autowaifu_sql import update_previous_wafu
     except AttributeError:
         return
     cws = get_current_wafu_settings(event.chat_id)
@@ -186,7 +186,7 @@ async def wafu_to_chat(event):
 @register(outgoing=True, pattern=r"^.savewaifu(?: |$)(.*)")
 async def save_wafu(event):
     try:
-        from userbot.plugins.sql_helper.autowaifu_sql import add_wafu_setting
+        from LEGEND.plugins.sql_helper.autowaifu_sql import add_wafu_setting
     except AttributeError:
         return await event.edit("`Running on Non-SQL mode!`")
 
@@ -207,7 +207,7 @@ Add them to your harem by sending /protecc character name"""
 @register(outgoing=True, pattern="^.checkwaifu$")
 async def show_wafu(event):
     try:
-        from userbot.plugins.sql_helper.autowaifu_sql import get_current_wafu_settings
+        from LEGEND.plugins.sql_helper.autowaifu_sql import get_current_wafu_settings
     except AttributeError:
         await event.edit("`Running on Non-SQL mode!`")
         return
@@ -224,7 +224,7 @@ async def show_wafu(event):
 @register(outgoing=True, pattern="^.clearwaifu$")
 async def del_wafu(event):
     try:
-        from userbot.plugins.sql_helper.autowaifu_sql import rm_wafu_setting
+        from LEGEND.plugins.sql_helper.autowaifu_sql import rm_wafu_setting
     except AttributeError:
         await event.edit("`Running on Non-SQL mode!`")
         return

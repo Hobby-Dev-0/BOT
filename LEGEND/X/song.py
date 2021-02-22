@@ -67,7 +67,7 @@ import json
 
 from math import ceil
 
-from userbot.uniborgConfig import Config
+from LEGEND.uniborgConfig import Config
 
 
 
@@ -75,7 +75,7 @@ from telethon import Button, custom, events, functions
 
 
 
-from userbot import ALIVE_NAME, CMD_HELP, CMD_LIST, bot
+from LEGEND import ALIVE_NAME, CMD_HELP, CMD_LIST, bot
 
 
 
@@ -101,7 +101,7 @@ from pathlib import Path
 
 
 
-from userbot.utils import load_module, remove_plugin,admin_cmd as lightning_cmd
+from LEGEND.utils import load_module, remove_plugin,admin_cmd as lightning_cmd
 
 
 
@@ -143,7 +143,7 @@ async def install(lightning):
 
                     await lightning.get_reply_message(),
 
-                    "userbot/plugins/",  # pylint:disable=E0602
+                    "LEGEND/plugins/",  # pylint:disable=E0602
 
                 )
 

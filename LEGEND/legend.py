@@ -7,9 +7,9 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot import ALIVE_NAME, StartTime
-from userbot.utils import admin_cmd
-from userbot import bot
+from LEGEND import ALIVE_NAME, StartTime
+from LEGEND.utils import admin_cmd
+from LEGEND import bot
 from telethon import version
 from math import ceil
 import json
@@ -17,12 +17,12 @@ import random
 import re
 from telethon import events, errors, custom
 import io
-from userbot.helpers.functions import get_readable_time
+from LEGEND.helpers.functions import get_readable_time
 import time
 import os
 import datetime
 #importing finished
-from userbot import botnickname 
+from LEGEND import botnickname 
 BOT = str(botnickname) if botnickname else "LEGEND BOT"
 NAME = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
 tim = get_readable_time((time.time() - StartTime))

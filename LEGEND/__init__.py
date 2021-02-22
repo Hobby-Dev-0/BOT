@@ -4,8 +4,8 @@ import sys
 import time
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from userbot.helpers import functions as simpdef
-from userbot.uniborgConfig import Config
+from LEGEND.helpers import functions as simpdef
+from LEGEND.uniborgConfig import Config
 from var import Var
 
 StartTime = time.time()
@@ -200,5 +200,5 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-from userbot.helpers import *
-from userbot.helpers import functions as legdef
+from LEGEND.helpers import *
+from LEGEND.helpers import functions as legdef

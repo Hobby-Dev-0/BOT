@@ -5,8 +5,8 @@
 from PIL import Image, ImageFont, ImageDraw
 import textwrap
 import os
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd, sudo_cmd
+from LEGEND import CMD_HELP
+from LEGEND.utils import admin_cmd, sudo_cmd
 from var import Var
 # how a lazy guy ports.
 client = borg

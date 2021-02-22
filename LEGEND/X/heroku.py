@@ -3,7 +3,7 @@
 # Copyright (C) 2020 Adek Maulana.
 # All rights reserved.
 """
-   Heroku manager for your userbot
+   Heroku manager for your LEGEND
 """
 
 import heroku3
@@ -11,9 +11,9 @@ import asyncio
 import os
 import requests
 import math
-from userbot.utils import admin_cmd
-from userbot import CMD_HELP
-from userbot.uniborgConfig import Config
+from LEGEND.utils import admin_cmd
+from LEGEND import CMD_HELP
+from LEGEND.uniborgConfig import Config
 
 # ================= 
 

@@ -1,10 +1,10 @@
 {
   "name": "LEGEND BOT",
-  "description": "The best userbot made by @LEGENDX22. Made with Love And Phone And Hardwork and... Nhi aur kahi se to nhi bana....For Support Join @teamishere ",
+  "description": "The best LEGEND made by @LEGENDX22. Made with Love And Phone And Hardwork and... Nhi aur kahi se to nhi bana....For Support Join @teamishere ",
   "logo": "https://telegra.ph/file/a44f1363bddbba84a2b98.jpg",
     "keywords": [
     "telegram",
-    "userbot",
+    "LEGEND",
     "plugin",
     "modular",
     "productivity"
@@ -19,7 +19,7 @@
     },
     "TEMP_DOWNLOAD_DIRECTORY": {
       "description": "Where downloaded files will go.",
-      "value": "./userbot/DOWNLOADS/",
+      "value": "./LEGEND/DOWNLOADS/",
       "required": false
     },
     "F_BAN_LOGGER_GROUP": {

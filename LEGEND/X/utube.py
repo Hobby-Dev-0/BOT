@@ -7,12 +7,12 @@
 
 import re
 import random
-from userbot import bot, CMD_HELP
+from LEGEND import bot, CMD_HELP
 import asyncio
 import os
 from pathlib import Path
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot.utils import admin_cmd, edit_or_reply
+from LEGEND.utils import admin_cmd, edit_or_reply
 
 
 IF_EMOJI = re.compile(

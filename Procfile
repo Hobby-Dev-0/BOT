@@ -1,1 +1,1 @@
-userbot: python -m userbot
+LEGEND: python -m LEGEND

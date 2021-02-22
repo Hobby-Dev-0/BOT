@@ -8,8 +8,8 @@
 from subprocess import PIPE
 from subprocess import run as runapp
 import pybase64
-from userbot import CMD_HELP
-from userbot.events import register, errors_handler
+from LEGEND import CMD_HELP
+from LEGEND.events import register, errors_handler
 
 
 @register(outgoing=True, pattern="^.hash (.*)")

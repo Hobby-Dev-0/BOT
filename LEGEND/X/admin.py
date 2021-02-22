@@ -22,10 +22,10 @@ from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
                                ChatBannedRights, MessageEntityMentionName,
                                MessageMediaPhoto)
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
-from userbot.utils import register, errors_handler
-from userbot.utils import admin_cmd
-from userbot.legend import NAME, MASTER, BOT
+from LEGEND import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
+from LEGEND.utils import register, errors_handler
+from LEGEND.utils import admin_cmd
+from LEGEND.legend import NAME, MASTER, BOT
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
 PP_ERROR = "`Failure while processing the image`"
@@ -313,7 +313,7 @@ async def spider(spdr):
     """
     # Check if the function running under SQL mode
     try:
-        from userbot.modules.sql_helper.spam_mute_sql import mute
+        from LEGEND.modules.sql_helper.spam_mute_sql import mute
     except AttributeError:
         await spdr.edit(NO_SQL)
         return
@@ -383,7 +383,7 @@ async def unmoot(unmot):
 
     # Check if the function running under SQL mode
     try:
-        from userbot.modules.sql_helper.spam_mute_sql import unmute
+        from LEGEND.modules.sql_helper.spam_mute_sql import unmute
     except AttributeError:
         await unmot.edit(NO_SQL)
         return
@@ -421,8 +421,8 @@ async def unmoot(unmot):
 async def muter(moot):
     """ Used for deleting the messages of muted people """
     try:
-        from userbot.modules.sql_helper.spam_mute_sql import is_muted
-        from userbot.modules.sql_helper.gmute_sql import is_gmuted
+        from LEGEND.modules.sql_helper.spam_mute_sql import is_muted
+        from LEGEND.modules.sql_helper.gmute_sql import is_gmuted
     except AttributeError:
         return
     muted = is_muted(moot.chat_id)
@@ -452,7 +452,7 @@ async def muter(moot):
 @borg.on(admin_cmd(pattern=r"ungmute(?: |$)(.*)"))
 @errors_handler
 async def ungmoot(un_gmute):
-    """ For .ungmute command, ungmutes the target in the userbot """
+    """ For .ungmute command, ungmutes the target in the LEGEND """
     # Admin or creator check
     chat = await un_gmute.get_chat()
     admin = chat.admin_rights
@@ -465,7 +465,7 @@ async def ungmoot(un_gmute):
 
     # Check if the function running under SQL mode
     try:
-        from userbot.modules.sql_helper.gmute_sql import ungmute
+        from LEGEND.modules.sql_helper.gmute_sql import ungmute
     except AttributeError:
         await un_gmute.edit(NO_SQL)
         return
@@ -510,7 +510,7 @@ async def gspider(gspdr):
 
     # Check if the function running under SQL mode
     try:
-        from userbot.modules.sql_helper.gmute_sql import gmute
+        from LEGEND.modules.sql_helper.gmute_sql import gmute
     except AttributeError:
         await gspdr.edit(NO_SQL)
         return

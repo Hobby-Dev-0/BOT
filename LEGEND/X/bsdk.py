@@ -7,8 +7,8 @@ from telethon import events
 
 import asyncio
 
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from LEGEND import CMD_HELP
+from LEGEND.utils import admin_cmd
 
 @borg.on(admin_cmd("bsdk"))
 async def _(event):

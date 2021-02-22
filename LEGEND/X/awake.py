@@ -1,4 +1,4 @@
-"""Check if userbot awake or not . 
+"""Check if LEGEND awake or not . 
 
 """
 
@@ -12,10 +12,10 @@ import time
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot import ALIVE_NAME, legendversion, StartTime, CMD_HELP
+from LEGEND import ALIVE_NAME, legendversion, StartTime, CMD_HELP
 from . import legend
-from userbot.legend import BOT
-from userbot.utils import admin_cmd
+from LEGEND.legend import BOT
+from LEGEND.utils import admin_cmd
 from telethon import version
 from math import ceil
 import json

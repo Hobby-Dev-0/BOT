@@ -3,7 +3,7 @@
 # modify by proboy22
 import asyncio
 import os
-from userbot.legend import BOT
+from LEGEND.legend import BOT
 import requests
 import time
 from PIL import Image
@@ -11,9 +11,9 @@ from io import BytesIO
 from datetime import datetime
 import random
 from telethon import events, Button, custom
-from userbot.utils import admin_cmd
-from userbot import ALIVE_NAME
-from userbot import bot as borg
+from LEGEND.utils import admin_cmd
+from LEGEND import ALIVE_NAME
+from LEGEND import bot as borg
 from telethon.tl.custom import Button
 from telethon.tl.types import ChannelParticipantsAdmins
 global ok
@@ -65,8 +65,8 @@ if TG_BOT_USER_NAME_BF_HER is not None:
             await event.answer([result] if result else None)
 
 
-from userbot.utils import admin_cmd
-from userbot import bot
+from LEGEND.utils import admin_cmd
+from LEGEND import bot
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="alive"))

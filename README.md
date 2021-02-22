@@ -6,7 +6,7 @@
 
 
 # LEGEND BOT
-This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram. All credits goes to its Respective Owners....
+This is a LEGEND made for telegram. I made this LEGEND with help of all other LEGENDs available in telegram. All credits goes to its Respective Owners....
 
 This is the one and only official LEGEND BOT Userbot made by [@LEGENDX22](https://t.me/LEGENDX22) Also join support channel and group :- https://t.me/teamishere Enjoy Your Bot!!💝
 [![LEGEND BOT logo](https://telegra.ph/file/a44f1363bddbba84a2b98.jpg)](https://t.me/teamishere)
@@ -51,7 +51,7 @@ virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
 # <Create local_config.py with variables as given below>
-python3 -m userbot
+python3 -m LEGEND
 ```
 
 An example `local_config.py` file could be:
@@ -70,7 +70,7 @@ class Development(Var):
 
 ### UniBorg Configuration
 
-The UniBorg Config is situated in `userbot/uniborgConfig.py`.
+The UniBorg Config is situated in `LEGEND/uniborgConfig.py`.
 
 **Heroku Configuration**
 Simply just leave the Config as it is.
@@ -84,4 +84,4 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 - This is because of `telethon.errors.rpc_error_list.ApiIdPublishedFloodError`
     - `APP_ID`:   You can get this value from https://my.telegram.org
     - `API_HASH`:   You can get this value from https://my.telegram.org
-- The userbot will not work without setting the mandatory vars.
+- The LEGEND will not work without setting the mandatory vars.

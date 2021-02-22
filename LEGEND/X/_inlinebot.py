@@ -1,8 +1,8 @@
-from userbot import CMD_LIST
+from LEGEND import CMD_LIST
 
-from userbot import ALIVE_NAME
+from LEGEND import ALIVE_NAME
 
-from userbot.utils import admin_cmd, sudo_cmd
+from LEGEND.utils import admin_cmd, sudo_cmd
 
 from platform import uname
 

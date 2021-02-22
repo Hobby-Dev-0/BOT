@@ -8,8 +8,8 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from LEGEND import CMD_HELP
+from LEGEND.utils import admin_cmd
 
 global USER_AFK  # pylint:disable=E0602
 global afk_time  # pylint:disable=E0602
@@ -83,7 +83,7 @@ async def on_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
-        # userbot's should not reply to other userbot's
+        # LEGEND's should not reply to other LEGEND's
         # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
         return False
     if USER_AFK and not (await event.get_sender()).bot:  # pylint:disable=E0602

@@ -18,9 +18,9 @@ from telethon import events
 #made by Sh1vam Donot kang
 import asyncio
 #made by Sh1vam Donot kang
-from userbot.utils import admin_cmd
-from userbot import bot as tgbot
-from userbot import bot as borg
+from LEGEND.utils import admin_cmd
+from LEGEND import bot as tgbot
+from LEGEND import bot as borg
 import os
 import re
 import urllib

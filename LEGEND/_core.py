@@ -3,10 +3,10 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from userbot import ALIVE_NAME
-from userbot import bot 
-from userbot.utils import admin_cmd, load_module, remove_plugin, sudo_cmd
-from userbot.utils import edit_or_reply as eor
+from LEGEND import ALIVE_NAME
+from LEGEND import bot 
+from LEGEND.utils import admin_cmd, load_module, remove_plugin, sudo_cmd
+from LEGEND.utils import edit_or_reply as eor
 
 DELETE_TIMEOUT = 3
 thumb_image_path = "./Resources/IMG_20201211_144821_071.jpg"
@@ -22,7 +22,7 @@ async def send(event):
     message_id = event.message.id
     thumb = thumb_image_path
     input_str = event.pattern_match.group(1)
-    the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
+    the_plugin_file = "./LEGEND/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         start = datetime.now()
         pro = await event.client.send_file(
@@ -55,7 +55,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "userbot/plugins/",  # pylint:disable=E0602
+                    "LEGEND/plugins/",  # pylint:disable=E0602
                 )
             )
             if "(" not in downloaded_file_name:

@@ -6,8 +6,8 @@ from contextlib import suppress
 import os
 import sys
 import asyncio
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from LEGEND import CMD_HELP
+from LEGEND.utils import admin_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (

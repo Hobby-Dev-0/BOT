@@ -1,4 +1,4 @@
-from userbot.utils import admin_cmd as a
+from LEGEND.utils import admin_cmd as a
 #sleep how many times after each edit in 'lol' 
 EDIT_SLEEP = 1
 #edit how many times in 'lol' 

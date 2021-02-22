@@ -6,7 +6,7 @@
 
 
 from telethon import events, Button, custom
-from userbot.legend import BOT
+from LEGEND.legend import BOT
 import os,re
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions

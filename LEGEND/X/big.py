@@ -9,8 +9,8 @@ Credits to @TeleBotHelp
 # He Worked Very Hard to do this, So Please Respect Him!!
 
 import asyncio
-from userbot.utils import admin_cmd
-from userbot import CMD_HELP
+from LEGEND.utils import admin_cmd
+from LEGEND import CMD_HELP
 from telethon import events
 import random
 import logging
